@@ -2,7 +2,7 @@
   "name": "multihashes",
   "version": "0.4.5",
   "description": "multihash implementation",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test:node": "aegir-test node",
     "lint": "aegir-lint",
@@ -14,7 +14,8 @@
     "release-minor": "aegir-release --type minor --docs",
     "release-major": "aegir-release --type major --docs",
     "coverage": "aegir-coverage",
-    "coverage-publish": "aegir-coverage publish"
+    "coverage-publish": "aegir-coverage publish",
+    "prepublishOnly": "npm run lint && npm run test && npm run build"
   },
   "pre-commit": [
     "lint",
